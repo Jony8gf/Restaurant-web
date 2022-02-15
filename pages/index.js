@@ -721,7 +721,7 @@ export default function Home() {
         <footer className="mt-24 mb-8">
           <div className="items-center w-[960] mx-11 grid grid-cols-1 gap-6 ">
             <div className="text-center">
-              <p class="footer__copy">&#169; 2022 JonyCoding. All right reserved</p>
+              <p className="footer__copy">&#169; 2022 JonyCoding. All right reserved</p>
             </div>
           </div>
         </footer>
