@@ -1,9 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+  --body-font: 'Poppins', sans-serif;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: var(--body-font);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,4 +25,56 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.dark{
+  background: #1d2521;
+}
+
+.menu__img{
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.card {
+  height: 325px;
+  width: 255px;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  margin-left: 3rem;
+}
+
+.card:hover .card-front {
+  transform: rotateX(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateX(0deg);
+}
+
+.card-front {
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.card-back {
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: -10rem;
+  position: relative;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+  color: #ffffff;
+  text-align: center;
 }
